@@ -1,0 +1,22 @@
+-- Cargar un script de la bbdd en linux a través de la línea de comandos con el comando source
+
+--1º Cambiar el el adaptador a nat en la máquina virtual para tener internet
+
+--2º descargar el fichero
+
+wget http://downloads.mysql.com/docs/sakila-db.tar.gz
+
+--3º descomprimir el fichero que acabamos de descargar
+
+tar -xvf sakila-db.tar.gz
+
+-- 4º Iniciar el interprete de mysql (inicio sesión local) y cargar los ficheros los dos ficheros descargados
+
+-- 4.1 Cargamos la definicion de las tablas
+
+source sakila-schema.sql
+
+-- 4.2 Cargamos los datos
+
+source sakila-data.sql
+
